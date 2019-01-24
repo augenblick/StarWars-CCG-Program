@@ -27,7 +27,7 @@ public enum SWCardType{
 	INT_LOST("Lost Interrupt", "Inter"),
 	INT_LOST_USED("Lost/Used Interrupt", "Inter"),
 	INT_START_LOST("Starting/Lost Interrupt", "Inter"),
-	INT_START_USED("Starting/Used Interrup", "Inter"),
+	INT_START_USED("Starting/Used Interrupt", "Inter"),
 	INT_USED("Used Interrupt", "Inter"),
 
 	LOC_SECTOR("Location: Sector", "Loc"),

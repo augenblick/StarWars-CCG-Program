@@ -20,7 +20,7 @@ public class CardMain{
 		while (continueLoop){
 			
 			Scanner userInput = new Scanner(System.in);
-			System.out.println("\nPick a Pack!: \n1)Premiere\n2)A New Hope\n3)Hoth\n4)Dagobah\n5)Cloud City");
+			System.out.println("\nPick a Pack!: \n1)Premiere\n2)A New Hope\n3)Hoth\n4)Dagobah\n5)Cloud City\n[-1 to exit]");
 			int userChoice = userInput.nextInt();
 
 			if (userChoice < 0){continueLoop = false; break;}

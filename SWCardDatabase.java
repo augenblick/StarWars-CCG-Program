@@ -4,6 +4,8 @@ public class SWCardDatabase{
 	
 	private static SWCardDatabase singleInstance = null; 
 	private SWCard[] fullCardSet;
+	private int[] recentCardsDrawn = new int[30];
+	private int recentCardsCount;
 
 	int cardsInFile = 2875;
 
@@ -788,8 +790,25 @@ public class SWCardDatabase{
 
 		// once the Card Array has been decided, return a random card from it
 		int max = thisArray.length;
-		int randomNum = ThreadLocalRandom.current().nextInt(0, max);
-		return thisArray[randomNum];
+		int randoCalrissian;
+		boolean redraw;
+
+		
+		do {
+		randoCalrissian = ThreadLocalRandom.current().nextInt(0, max);
+		
+		// check that we haven't too recently draw this same number
+		redraw = false;
+			for (int i = 0; i < recentCardsDrawn.length; i++){
+				if (randoCalrissian == recentCardsDrawn[i]) {
+					redraw = true;
+				}
+			}
+		} while (redraw);
+
+		recentCardsDrawn[(recentCardsCount % (recentCardsDrawn.length - 1))] = randoCalrissian;
+
+		return thisArray[randoCalrissian];
 	}
 
 

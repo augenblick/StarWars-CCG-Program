@@ -257,7 +257,8 @@ public class SWCard extends Product{
     public String toString(){
 
         //String newString = "Product Type: " + super.getProductType();
-         String newString = this.rarity.toString() + " | " + String.format("%-20s", this.type) + " | " + String.format("%-15s", super.getName());
+         String newString = this.rarity.toString() + " | " + String.format("%-23s", this.type) + " | " + String.format("%-30s", super.getName())
+         + " | " + String.format("%.40s", this.gameText) + "...";
         /*    newString += "\nType: " + this.type;
             //newString += "\nsubType: " + this.subType;
             newString += "\nSide: " + this.side;
