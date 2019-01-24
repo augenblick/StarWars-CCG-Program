@@ -4,7 +4,7 @@ public class SWCardDatabase{
 	
 	private static SWCardDatabase singleInstance = null; 
 	private SWCard[] fullCardSet;
-	private int[] recentCardsDrawn = new int[30];
+	private int[] recentCardsDrawn = new int[15];
 	private int recentCardsCount;
 
 	int cardsInFile = 2875;
@@ -803,11 +803,13 @@ public class SWCardDatabase{
 			for (int i = 0; i < recentCardsDrawn.length; i++){
 				if (randoCalrissian == recentCardsDrawn[i]) {
 					redraw = true;
+					//System.out.println("... ... ...");
 				}
 			}
 		} while (redraw);
 
 		recentCardsDrawn[(recentCardsCount % (recentCardsDrawn.length - 1))] = randoCalrissian;
+		recentCardsCount++;
 
 		return thisArray[randoCalrissian];
 	}
