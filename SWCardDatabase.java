@@ -797,7 +797,8 @@ public class SWCardDatabase{
 		do {
 		randoCalrissian = ThreadLocalRandom.current().nextInt(0, max);
 		
-		// check that we haven't too recently draw this same number
+		// TO DO: FURTHER TESTING TO ENSURE THIS IS WORKING/SUFFICIENT
+		// check that we haven't too recently drawn this same number
 		redraw = false;
 			for (int i = 0; i < recentCardsDrawn.length; i++){
 				if (randoCalrissian == recentCardsDrawn[i]) {
@@ -807,6 +808,7 @@ public class SWCardDatabase{
 		} while (redraw);
 
 		recentCardsDrawn[(recentCardsCount % (recentCardsDrawn.length - 1))] = randoCalrissian;
+		System.out.println(randoCalrissian);
 
 		return thisArray[randoCalrissian];
 	}
