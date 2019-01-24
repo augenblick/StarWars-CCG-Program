@@ -808,7 +808,6 @@ public class SWCardDatabase{
 		} while (redraw);
 
 		recentCardsDrawn[(recentCardsCount % (recentCardsDrawn.length - 1))] = randoCalrissian;
-		System.out.println(randoCalrissian);
 
 		return thisArray[randoCalrissian];
 	}

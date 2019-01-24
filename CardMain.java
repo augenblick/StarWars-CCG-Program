@@ -20,7 +20,7 @@ public class CardMain{
 		while (continueLoop){
 			
 			Scanner userInput = new Scanner(System.in);
-			System.out.println("\nPick a Pack!: \n1)Premiere\n2)A New Hope\n3)Hoth\n4)Dagobah\n5)Cloud City\n[-1 to exit]");
+			System.out.println("\nPick a Pack!: \n 1)Premiere\n 2)A New Hope\n 3)Hoth\n 4)Dagobah\n 5)Cloud City\n 6)Cloud City Box\n-1)exit");
 			int userChoice = userInput.nextInt();
 
 			if (userChoice < 0){continueLoop = false; break;}
@@ -29,6 +29,7 @@ public class CardMain{
 			else if(userChoice == 3) packFirst = new HothPack();
 			else if(userChoice == 4) packFirst = new DagobahPack();
 			else if(userChoice == 5) packFirst = new CloudCityPack();
+			else if(userChoice == 6) packFirst = new CloudCityBox();
 			else packFirst = new PremierePack();
 
 
