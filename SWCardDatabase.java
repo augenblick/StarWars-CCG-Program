@@ -9,55 +9,6 @@ public class SWCardDatabase{
 
 	int cardsInFile = 2875;
 
-	//Set offsets
-	int prem_Offset;
-	int prem_U_Offset;
-	int prem_R_Offset;
-
-	int nH_Offset;
-	int nH_U_Offset;
-	int nH_R_Offset;
-
-	int hoth_Offset;
-	int hoth_U_Offset;
-	int hoth_R_Offset;
-
-	int dag_Offset;
-	int dag_U_Offset;
-	int dag_R_Offset;
-
-	int cC_Offset;
-	int cC_U_Offset;
-	int cC_R_Offset;
-
-	int jP_Offset;
-	int jP_U_Offset;
-	int jP_R_Offset;
-
-	int spEd_Offset;
-	int spEd_U_Offset;
-	int spEd_R_Offset;
-
-	int end_Offset;
-	int end_U_Offset;
-	int end_R_Offset;
-
-	int dS2_Offset;
-	int dS2_U_Offset;
-	int dS2_R_Offset;
-
-	int tat_Offset;
-	int tat_U_Offset;
-	int tat_R_Offset;
-
-	int cor_Offset;
-	int cor_U_Offset;
-	int cor_R_Offset;
-
-	int th_Offset;
-	int th_U_Offset;
-	int th_R_Offset;
-
 	// card arrays
 	SWCard[] premiereCommons = new SWCard[198];
 	SWCard[] premiereUncommons = new SWCard[156];
@@ -134,16 +85,11 @@ public class SWCardDatabase{
 // Singleton constructor stuff ////////////////////////////
 
 	private SWCardDatabase(){
-		//System.out.println("ADSDSADHFDSONHFDS:");
 		createCardArray("C:\\Users\\Nathan\\Documents\\programming\\SWCCG\\data\\SWCCGCardList_Formatted.csv");
 	}
 
 	private SWCardDatabase(String filePath){
-		fullCardSet = new SWCard[cardsInFile]; //2517
-		CardlistScanner scanMain = new CardlistScanner(filePath);
-			for (int i = 0; i < fullCardSet.length; i++){
-					fullCardSet[i] = new SWCard(scanMain.readCard());
-			}
+		createCardArray(filePath);
 		}
 
 
@@ -597,7 +543,6 @@ public class SWCardDatabase{
 	}
 
 	private int addToCardArray(SWCard[] cardArray, SWCard cardToAdd, int cardCount, int numberCardsToAdd){
-		//System.out.println(" current count is ");
 		for (int i = 0; i < numberCardsToAdd; i++){
 
 			cardArray[cardCount] = cardToAdd;

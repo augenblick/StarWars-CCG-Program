@@ -10,15 +10,15 @@ public class CardTester {
 
 		for (int i = 0; i < 10000; i++){
 
-			SWCard thisCard = fullCardSet.retrieveRandomCard(SWSet.A_NEW_HOPE, SWRarity.R);
+			SWCard thisCard = fullCardSet.retrieveRandomCard(SWSet.CLOUD_CITY, SWRarity.R);
 
 
-			if (thisCard.getRarity() == SWRarity.R1){
+			if (thisCard.getName().equals("Boba Fett")){
 
 				r1Count++;
 			}
 
-			else if (thisCard.getRarity() == SWRarity.R2){
+			else if (thisCard.getName().equals("Lando Calrissian")){
 				r2Count++;
 			}
 

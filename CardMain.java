@@ -53,3 +53,7 @@ public class CardMain{
 	    }
 	}
 }
+
+
+
+// TO DO: check random card occurance.  Make sure random pack draws "feel" right. (not 8 Landos for every Boba Fett...)
