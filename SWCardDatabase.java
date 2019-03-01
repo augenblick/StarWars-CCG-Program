@@ -85,7 +85,9 @@ public class SWCardDatabase{
 // Singleton constructor stuff ////////////////////////////
 
 	private SWCardDatabase(){
-		createCardArray("C:\\Users\\Nathan\\Documents\\programming\\SWCCG\\data\\SWCCGCardList_Formatted.csv");
+
+		// relative path
+		createCardArray("./data/SWCCGCardList_Formatted.csv");
 	}
 
 	private SWCardDatabase(String filePath){

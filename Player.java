@@ -9,8 +9,9 @@ class Player{
 	}
 
 	public CardSet createSet(){
-		CardSet newSet = CardSet(this, "TestSet")
-		playerCollection[setCount] = CardSet
+		CardSet newSet = new CardSet(this, "TestSet");
+		//playerCollection[setCount] = CardSet;
+		return null;
 	}
 
 	public void addCardtoSet(){
