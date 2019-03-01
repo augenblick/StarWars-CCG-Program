@@ -11,7 +11,7 @@ class CardSet{
 	}
 
 	// duplicates an existing CardSet
-	public CardSet(Player player, , String setName, CardSet cardSet){
+	public CardSet(Player player, String setName, CardSet cardSet){
 		if (cardSet.getOwner() == this.owner){
 			this.setName = setName;
 			int[] originalSet = cardSet.getSetInventory();
@@ -23,7 +23,9 @@ class CardSet{
 
 	public void addCard(int cardIndex, Player player){
 		if (player == this.owner){
-			int[cardIndex] += 1;
+			//int[cardIndex] += 1;
+			// TODO I'm guessing here
+			this.inventory[cardIndex] += 1;
 		}
 	}
 
@@ -32,15 +34,18 @@ class CardSet{
 	}
 
 	private int[] getSetInventory(){
-		return 
+		//return;
+		// TODO not sure what is supposed to happen here
+		return null;
 	}
 
 	public String toString(){
-		for (int i = 0; i < this.inventory; i++){
+		for (int i = 0; i < this.inventory.length; i++){
 			if (inventory[i] > 0){
-				System.out.println(fullCardList[i].getCardName() + " x" + inventory[i]);
+				System.out.println(/*fullCardList[i].getCardName()*/ " x" + inventory[i]);
 			}
 		}
+		return null;
 	}
 
 
